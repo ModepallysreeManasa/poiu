@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 3px -5px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 1px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+  margin:0.01px;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 3px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  margin:5px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>FACULTY</h1>
+<hr>
+
+
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('CSE')"> Computer Science and Engineering</button>
+  <button class="btn" onclick="filterSelection('ECE')">Electronics and Communication Engineering</button>
+  <button class="btn" onclick="filterSelection('BT')"> BioTechnology</button>
+  <button class="btn" onclick="filterSelection('FP')"> Founding Professors</button>
+  <button class="btn" onclick="filterSelection('M')"> Management</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column CSE">
+    <div class="content">
+      <img src="F:\MDP\AK.png"  style="width:70%;height:285px">
+      <h4>Amit Kumar</h4>
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\GV.png"  style="width:70%;height:285px">
+      <h4>Gaurav Varshney</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\VM.png"  style="width:70%;height:285px">
+      <h4>Vikas Kumar Malviya</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\PG.png"  style="width:70%;height:285px">
+      <h4>Prosenjit Gupta</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\AD.png"  style="width:70%;height:285px">
+      <h4>Ashoo Dobey</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\AG.png"  style="width:70%;height:285px">
+      <h4>Akhilesh Agarwal</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\KN.png"  style="width:70%;height:285px">
+      <h4>Kumar Nitesh</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\DP.png"  style="width:70%;height:285px">
+      <h4>Deepika Prakash</h4>
+      
+    </div>
+  </div>
+  <div class="column CSE">
+    <div class="content">
+    <img src="F:\MDP\GK.png"  style="width:70%;height:285px">
+      <h4>DR.G krishnaiah</h4>
+      
+    </div>
+  </div>
+
+
+  
+  <div class="column ECE">
+    <div class="content">
+      <img src="F:\MDP\VU.png" style="width:70%;height:285px">
+      <h4>Vikas Upadhyaya</h4>
+      
+    </div>
+  </div>
+  <div class="column ECE">
+    <div class="content">
+    <img src="F:\MDP\JJ.png" style="width:70%;height:285px">
+      <h4>Jitendra Joshi</h4>
+      
+    </div>
+  </div>
+  <div class="column ECE">
+    <div class="content">
+    <img src="F:\MDP\N.png" style="width:70%;height:285px">
+      <h4>Neha Tiwari</h4>
+      
+    </div>
+  </div>
+  <div class="column ECE">
+    <div class="content">
+    <img src="F:\MDP\IN.png" style="width:70%;height:285px">
+      <h4>Ipseeta Nandan </h4>
+      
+    </div>
+  </div>
+  <div class="column ECE">
+    <div class="content">
+    <img src="F:\MDP\SG.png" style="width:70%;height:285px">
+      <h4>Sanjay Gupta</h4>
+      
+    </div>
+  </div>
+  <div class="column ECE">
+    <div class="content">
+    <img src="F:\MDP\ARG.png" style="width:70%;height:285px">
+      <h4>Arghya Guchaith</h4>
+      
+    </div>
+  </div>
+
+  <div class="column BT">
+    <div class="content">
+      <img src="F:\MDP\SK.png"  style="width:70%;height:285px">
+      <h4>Dr.Sunil Khanna</h4>
+      
+    </div>
+  </div>
+  <div class="column BT">
+    <div class="content">
+    <img src="F:\MDP\NK.png"  style="width:70%;height:285px">
+      <h4>Dr.Narayan Kumar</h4>
+    
+    </div>
+  </div>
+  <div class="column BT">
+    <div class="content">
+    <img src="F:\MDP\UR.png"  style="width:70%;height:285px">
+      <h4>MR. Utkarsh raj</h4>
+      
+    </div>
+  </div>
+  <div class="column BT">
+    <div class="content">
+    <img src="F:\MDP\SC.png"  style="width:70%;height:285px">
+      <h4>Subash Chandra</h4>
+      
+    </div>
+  </div>
+  <div class="column FP">
+    <div class="content">
+    <img src="F:\MDP\RR.png"  style="width:70%;height:285px">
+      <h4>Raja Raman</h4>
+      
+    </div>
+  </div>
+  <div class="column FP">
+    <div class="content">
+    <img src="F:\MDP\AN.png"  style="width:70%;height:285px">
+      <h4>Arun Nigavekar</h4>
+      
+    </div>
+  </div>
+  <div class="column FP">
+    <div class="content">
+    <img src="F:\MDP\ASM.png"  style="width:70%;height:285px">
+      <h4>Subash Chandra</h4>
+      
+    </div>
+  </div>
+  <div class="column FP">
+    <div class="content">
+    <img src="F:\MDP\ASM.png"  style="width:70%;height:285px">
+      <h4>Vijay Vasantrao Mandke</h4>
+      
+    </div>
+  </div>
+  <div class="column FP">
+    <div class="content">
+    <img src="F:\MDP\RS.png"  style="width:70%;height:285px">
+      <h4>Rajeev Sangal</h4>
+      
+    </div>
+  </div>
+  <div class="column FP">
+    <div class="content">
+    <img src="F:\MDP\RS.png"  style="width:70%;height:285px">
+      <h4>Rajeev Sangal</h4>
+      
+    </div>
+  </div>
+  <div class="column M">
+    <div class="content">
+    <img src="F:\MDP\NSH.png"  style="width:70%;height:285px">
+      <h4>Neeraj Sharma</h4>
+      
+    </div>
+  </div>
+  <div class="column M">
+    <div class="content">
+    <img src="F:\MDP\SMG.png"  style="width:70%;height:285px">
+      <h4>Somnath Gosh</h4>
+      
+    </div>
+  </div>
+  <div class="column M">
+    <div class="content">
+    <img src="F:\MDP\MSH.png"  style="width:70%;height:285px">
+      <h4>Manohar singh</h4>
+      
+    </div>
+  </div>
+<div class="column M">
+    <div class="content">
+    <img src="F:\MDP\SSC.png"  style="width:70%;height:285px">
+      <h4>SHESHADRI CHATTERJEE</h4>
+      
+    </div>
+  </div>
+
+  
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
